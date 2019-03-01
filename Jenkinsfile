@@ -21,6 +21,11 @@ pipeline {
                 }
             }
         }
+        stage('Upload') {
+            steps {
+                sh 'curl -X PUT -u u:p -T target/my-app-1.0-SNAPSHOT.jar "http://localhost:8081/artifactory/libs-release-local/my-app-1.0-SNAPSHOT.jar"'
+            }
+        }
         stage('Deploy') {
             steps {
                 sh 'java -jar target/my-app-1.0-SNAPSHOT.jar'
