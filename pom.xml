@@ -43,7 +43,7 @@
 	<artifactId>artifactory-maven-plugin</artifactId>
 	<version>4.13.2</version>
 	<inherited>false</inherited>
-	<exection>
+	<execution>
 		<id>build-info</id>
 		<goals>
 			<goal>publish</goal>
@@ -55,7 +55,7 @@
 			<repoKey>libs-release-local</repoKey>
 			<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
 		</configuration>
-	</exection>
+	</execution>
 </plugin>
     </plugins>
   </build>
