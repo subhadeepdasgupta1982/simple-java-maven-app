@@ -11,10 +11,12 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'make check || true' 
-                junit '**/target/*.xml'
+        steps {
+                sh 'mvn test'
+            }
+            post {
+                always {
+                    junit 'target/*.xml'
             }
         }
         stage('Deploy') {
