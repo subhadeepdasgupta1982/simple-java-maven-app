@@ -32,6 +32,31 @@
           </archive>
         </configuration>
       </plugin>
+<plugin>
+	<groupId>org.jfrog.buildinfo</groupId>
+	<artifactId>artifactory-maven-plugin</artifactId>
+	<version>4.13.2</version>
+	<inherited>false</inherited>
+	<exection>
+		<id>build-info</id>
+		<goals>
+			<goal>publish</goal>
+		</goals>
+		<configuration>
+			<contextUrl>http://54.191.126.24:8081/artifactory/</contextUrl>
+			<username>admin</username>
+			<password>password</password>
+			<repoKey>libs-release-local</repoKey>
+			<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+		</configuration>
+	</exection>
+</plugin>
     </plugins>
   </build>
+<pluginRepositories>
+  <pluginRepository>
+    <id>Maven-Artifactory-Plugin</id>
+    <url>https://jcenter.bintray.com</url>
+  </pluginRepository>
+</pluginRepositories>
 </project>
