@@ -13,7 +13,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'java -jar target/my-app-1.0-SNAPSHOT.jar'
+                sh 'make check || true' 
+                junit '**/target/*.xml'
             }
         }
         stage('Deploy') {
