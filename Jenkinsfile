@@ -1,4 +1,4 @@
-//author: Subhadeep Dasgupta dasgus555
+//author: Subhadeep Dasgupta dasgus
 pipeline {
     agent any
     tools {
