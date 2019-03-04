@@ -1,4 +1,4 @@
-//author: Subhadeep Dasgupta dasgus5zxdca  ada
+//author: Subhadeep Dasgupta dasgus5zxdca
 pipeline {
     agent any
     tools {
